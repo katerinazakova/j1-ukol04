@@ -10,8 +10,18 @@ import java.util.List;
 public class Sportka {
   private final List<Integer> osudi = new ArrayList<>();
 
+
   public Sportka() {
     //TODO naplnit osudí čísly 1 až 49.
+
+    int cislo = 1;
+    while(cislo<=48){
+        cislo++;
+        System.out.println(cislo);
+      osudi.add(cislo);
+
+    }
+
   }
 
   /**
@@ -21,6 +31,9 @@ public class Sportka {
    */
   public void zamichat() {
     //TODO zamíchat osudí
+
+ Collections.shuffle(osudi);
+
   }
 
   /**
@@ -32,7 +45,8 @@ public class Sportka {
    */
   public List<Integer> vylosovanaCisla() {
     //TODO Vrátit seznam prvních 6 čísel z osudí.
-    return null;
+
+    return osudi.subList(0,6);
   }
 
   /**
@@ -42,6 +56,6 @@ public class Sportka {
    */
   public Integer dodatkoveCislo() {
     //TODO Vrátit sedmé číslo z osudí.
-    return null;
+    return osudi.get(6);
   }
 }
