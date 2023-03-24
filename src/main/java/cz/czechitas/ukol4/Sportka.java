@@ -12,11 +12,10 @@ public class Sportka {
 
 
     public Sportka() {
-        int cislo = 0;
-        while (cislo <= 48) {
-            cislo++;
-            System.out.println(cislo);
+        int cislo = 1;
+        while (cislo <= 49) {
             osudi.add(cislo);
+            cislo++;
         }
     }
 
